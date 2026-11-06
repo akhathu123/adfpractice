@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "practicedatafactorydev"
+		},
+		"DS_CSVTO_PARQUET_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_FROM_ONPREMSQL_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_CSVTO_PARQUET_accountKey": {
+			"value": ""
+		},
+		"LS_DELETE_PDF_accountKey": {
+			"value": ""
+		},
+		"LS_DELETE_PDF_LOG_connectionString": {
+			"value": ""
+		},
+		"LS_PARQ_accountKey": {
+			"value": ""
+		},
+		"LS_SQL_ONPREM_password": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://KV-DF1234.vault.azure.net/"
+		},
+		"DS_CSVTO_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlsdevstorage001.dfs.core.windows.net/"
+		},
+		"LS_ADLS_FROM_ONPREMSQL_properties_typeProperties_url": {
+			"value": "https://adlssinkstorage002.dfs.core.windows.net/"
+		},
+		"LS_CSV_properties_typeProperties_url": {
+			"value": "https://adlsdevcsvtrigger99.dfs.core.windows.net/"
+		},
+		"LS_CSVTO_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlssinkstorage002.dfs.core.windows.net/"
+		},
+		"LS_DELETE_PDF_properties_typeProperties_url": {
+			"value": "https://adlsdevstorage001.dfs.core.windows.net/"
+		},
+		"LS_PARQ_properties_typeProperties_url": {
+			"value": "https://adlsdevcsvouttrigger99.dfs.core.windows.net/"
+		},
+		"LS_SQL_ONPREM_properties_typeProperties_server": {
+			"value": "AKHATHUMALIKNOO\\MSSQLSERVER2025"
+		},
+		"LS_SQL_ONPREM_properties_typeProperties_database": {
+			"value": "AdventureWorksDW2025"
+		},
+		"LS_SQL_ONPREM_properties_typeProperties_userName": {
+			"value": "sqlserver"
+		},
+		"SCH_EVENT_properties_typeProperties_scope": {
+			"value": "/subscriptions/0f664f5b-8760-4bc8-a81b-70376ecc854e/resourceGroups/RG_practice_DATAENGINEER/providers/Microsoft.Storage/storageAccounts/adlsdevcsvtrigger99"
+		}
+	}
+}

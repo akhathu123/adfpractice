@@ -1,0 +1,175 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "practicedatafactorydev"
+		},
+		"DS_CSVTO_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_CSVTO_PARQUET'"
+		},
+		"LS_ADLS_FROM_ONPREMSQL_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_FROM_ONPREMSQL'"
+		},
+		"LS_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV'"
+		},
+		"LS_CSVTO_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSVTO_PARQUET'"
+		},
+		"LS_DELETE_PDF_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_DELETE_PDF'"
+		},
+		"LS_DELETE_PDF_LOG_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_DELETE_PDF_LOG'"
+		},
+		"LS_PARQ_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_PARQ'"
+		},
+		"LS_SQL_ONPREM_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQL_ONPREM'"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://KV-DF1234.vault.azure.net/"
+		},
+		"DS_CSVTO_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevstorage001.dfs.core.windows.net/"
+		},
+		"LS_ADLS_FROM_ONPREMSQL_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssinkstorage002.dfs.core.windows.net/"
+		},
+		"LS_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevcsvtrigger99.dfs.core.windows.net/"
+		},
+		"LS_CSVTO_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssinkstorage002.dfs.core.windows.net/"
+		},
+		"LS_DELETE_PDF_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevstorage001.dfs.core.windows.net/"
+		},
+		"LS_PARQ_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevcsvouttrigger99.dfs.core.windows.net/"
+		},
+		"LS_SQL_ONPREM_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "AKHATHUMALIKNOO\\MSSQLSERVER2025"
+		},
+		"LS_SQL_ONPREM_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorksDW2025"
+		},
+		"LS_SQL_ONPREM_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqlserver"
+		},
+		"SCH_EVENT_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/0f664f5b-8760-4bc8-a81b-70376ecc854e/resourceGroups/RG_practice_DATAENGINEER/providers/Microsoft.Storage/storageAccounts/adlsdevcsvtrigger99"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "practicedatafactorydev_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"DS_CSVTO_PARQUET_accountKey": {
+						"value": "[parameters('DS_CSVTO_PARQUET_accountKey')]"
+					},
+					"LS_ADLS_FROM_ONPREMSQL_accountKey": {
+						"value": "[parameters('LS_ADLS_FROM_ONPREMSQL_accountKey')]"
+					},
+					"LS_CSV_accountKey": {
+						"value": "[parameters('LS_CSV_accountKey')]"
+					},
+					"LS_CSVTO_PARQUET_accountKey": {
+						"value": "[parameters('LS_CSVTO_PARQUET_accountKey')]"
+					},
+					"LS_DELETE_PDF_accountKey": {
+						"value": "[parameters('LS_DELETE_PDF_accountKey')]"
+					},
+					"LS_DELETE_PDF_LOG_connectionString": {
+						"value": "[parameters('LS_DELETE_PDF_LOG_connectionString')]"
+					},
+					"LS_PARQ_accountKey": {
+						"value": "[parameters('LS_PARQ_accountKey')]"
+					},
+					"LS_SQL_ONPREM_password": {
+						"value": "[parameters('LS_SQL_ONPREM_password')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"DS_CSVTO_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('DS_CSVTO_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_ADLS_FROM_ONPREMSQL_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_FROM_ONPREMSQL_properties_typeProperties_url')]"
+					},
+					"LS_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_properties_typeProperties_url')]"
+					},
+					"LS_CSVTO_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSVTO_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_DELETE_PDF_properties_typeProperties_url": {
+						"value": "[parameters('LS_DELETE_PDF_properties_typeProperties_url')]"
+					},
+					"LS_PARQ_properties_typeProperties_url": {
+						"value": "[parameters('LS_PARQ_properties_typeProperties_url')]"
+					},
+					"LS_SQL_ONPREM_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQL_ONPREM_properties_typeProperties_server')]"
+					},
+					"LS_SQL_ONPREM_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQL_ONPREM_properties_typeProperties_database')]"
+					},
+					"LS_SQL_ONPREM_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQL_ONPREM_properties_typeProperties_userName')]"
+					},
+					"SCH_EVENT_properties_typeProperties_scope": {
+						"value": "[parameters('SCH_EVENT_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
