@@ -1,0 +1,15 @@
+{
+	"name": "practicedatafactorydev",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "32349f41-9bf6-4aca-b892-fc470c82112e",
+		"tenantId": "41a66393-0833-4ddf-88e0-8721f9c3233c"
+	}
+}

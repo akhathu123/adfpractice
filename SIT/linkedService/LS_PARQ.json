@@ -1,0 +1,12 @@
+{
+	"name": "LS_PARQ",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://adlsdevcsvouttrigger99.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDAxNEZBRkEyLUYwQ0ItNDI5QS04NEQxLUI5N0EwMjA1MzEyMV83NGMxMzQ2Ni1iZDg0LTQ0MjctYmMxMS0yMTMzYTIwYThiNmUiDQp9"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"name": "DS_CSVTO_PARQUET",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "DS_CSVTO_PARQUET",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://adlsdevstorage001.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDAxNEZBRkEyLUYwQ0ItNDI5QS04NEQxLUI5N0EwMjA1MzEyMV81M2RhMTVmNS03MDQzLTRiZjMtYmExMy1kYzc2MTkxZjMzNDQiDQp9"
+		}
+	}
+}

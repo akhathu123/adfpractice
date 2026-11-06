@@ -1,0 +1,6 @@
+{
+	"name": "MSSQLOMPREM",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
