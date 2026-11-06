@@ -1,0 +1,24 @@
+{
+	"name": "SCH_EVENT",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PS_EVENTTRIGGER",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/inputcontainer/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/0f664f5b-8760-4bc8-a81b-70376ecc854e/resourceGroups/RG_practice_DATAENGINEER/providers/Microsoft.Storage/storageAccounts/adlsdevcsvtrigger99",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
