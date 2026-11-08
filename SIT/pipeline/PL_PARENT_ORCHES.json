@@ -57,6 +57,7 @@
 							"policy": {
 								"secureInput": false
 							},
+							"userProperties": [],
 							"typeProperties": {
 								"pipeline": {
 									"referenceName": "PL_CHILD_PIPELINE_INCREMENTAL",
